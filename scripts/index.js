@@ -16,4 +16,4 @@ container.appendChild(article);
 });
 
 })
-.catch(error => console.error("Error parsing Json"));
+.catch(error => console.error("Error parsing Json",error));
