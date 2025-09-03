@@ -1,1 +1,1 @@
-# Burgun-Blog
+Burgundaries first blog site
