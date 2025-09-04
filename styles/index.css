@@ -21,11 +21,12 @@ article {
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover */
+  overflow: hidden; /* prevents collapsed height with floated images */
 }
 
 article:hover {
-  transform: translateY(-5px);       /* subtle lift on hover */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* stronger shadow */
+  transform: translateY(-5px);       
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); 
 }
 
 article h2, article h3 {
@@ -48,6 +49,17 @@ article a:hover {
   text-decoration: underline;
 }
 
+/* Post images */
+.post-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
 /* Responsive adjustments for mobile */
 @media (max-width: 600px) {
   main {
@@ -66,20 +78,7 @@ article a:hover {
   article p {
     font-size: 0.95rem;
   }
-}
 
-.post-image {
-  width: 100%;
-  max-width: 300px; /* optional max width for desktop */
-  height: auto;
-  float: left;       /* image floats next to text on larger screens */
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
-/* For small screens, stack image above text */
-@media (max-width: 600px) {
   .post-image {
     float: none;
     width: 100%;
@@ -112,4 +111,10 @@ article a:hover {
   article {
     margin-bottom: 2.5rem;
   }
+}
+
+/* Header and footer spacing */
+header, footer {
+  text-align: center;
+  padding: 1rem 0;
 }
