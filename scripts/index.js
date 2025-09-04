@@ -1,6 +1,6 @@
 const container = document.getElementById("cont-sect");
 
-fetch("/post.json")
+fetch("./post.json")
 .then(response => response.json())
 .then(posts => {
     posts.forEach(post =>{
