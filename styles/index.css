@@ -1,10 +1,16 @@
 /* Base styles */
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #f0f4f8;
+  background: linear-gradient(120deg, #f0f4f8, #e0f0f8);
   color: #111;
   margin: 0;
   padding: 0;
+  animation: bgShift 15s infinite alternate; /* subtle background animation */
+}
+
+@keyframes bgShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
 }
 
 main {
@@ -20,13 +26,13 @@ article {
   padding: 1.5rem;
   margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover */
-  overflow: hidden; /* prevents collapsed height with floated images */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
 }
 
 article:hover {
-  transform: translateY(-5px);       
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); 
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 article h2, article h3 {
@@ -58,6 +64,11 @@ article a:hover {
   margin-right: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
+  transition: transform 0.3s ease; /* image hover animation */
+}
+
+.post-image:hover {
+  transform: scale(1.05) rotate(1deg); /* Easter egg effect */
 }
 
 /* Responsive adjustments for mobile */
