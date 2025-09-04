@@ -1,5 +1,7 @@
 const container = document.getElementById("cont-sect");
 
+console.log("script loaded container",container);
+
 fetch("./post.json")
 .then(response => response.json())
 .then(posts => {
