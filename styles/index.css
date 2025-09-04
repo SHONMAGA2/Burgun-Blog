@@ -1,35 +1,95 @@
-body{
-font-family: "Roboto", sans-serif;
-background-color:#f0f4f8;
-color:#111
+/* Base styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f4f8;
+  color: #111;
+  margin: 0;
+  padding: 0;
 }
 
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
 
 article {
-  background-color: #e0f0f8; 
+  background-color: #e0f0f8;
   border: 1px solid #ccc;
-  border-radius: 8px;         
-  padding: 1.5rem;            
-  margin-bottom: 2rem;       
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* smooth hover */
+}
+
+article:hover {
+  transform: translateY(-5px);       /* subtle lift on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1); /* stronger shadow */
 }
 
 article h2, article h3 {
-  color: #0a1f44; 
+  color: #0a1f44;
   font-family: 'Playfair Display', serif;
   margin-bottom: 0.75rem;
 }
 
 article p {
-  color: #111; 
+  color: #111;
   line-height: 1.6;
 }
 
 article a {
-  color: #b22222; 
+  color: #b22222;
   text-decoration: none;
 }
 
 article a:hover {
-  text-decoration: underline; 
+  text-decoration: underline;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+
+  article {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  article h2, article h3 {
+    font-size: 1.2rem;
+  }
+
+  article p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Desktop adjustments for large screens */
+@media (min-width: 1200px) {
+  main {
+    max-width: 1100px;
+  }
+
+  article {
+    padding: 2rem;
+  }
+
+  article h2, article h3 {
+    font-size: 2rem;
+  }
+
+  article p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Optional: spacing between articles on large screens */
+@media (min-width: 900px) {
+  article {
+    margin-bottom: 2.5rem;
+  }
 }
