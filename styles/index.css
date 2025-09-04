@@ -68,6 +68,26 @@ article a:hover {
   }
 }
 
+.post-image {
+  width: 100%;
+  max-width: 300px; /* optional max width for desktop */
+  height: auto;
+  float: left;       /* image floats next to text on larger screens */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* For small screens, stack image above text */
+@media (max-width: 600px) {
+  .post-image {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
 /* Desktop adjustments for large screens */
 @media (min-width: 1200px) {
   main {
